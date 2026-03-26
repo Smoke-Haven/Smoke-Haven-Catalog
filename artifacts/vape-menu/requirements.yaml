@@ -1,0 +1,17 @@
+packages:
+  "framer-motion": "Smooth page transitions and scroll-triggered animations"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility function to efficiently merge Tailwind CSS classes"
+  "react-hook-form": "Form state management for admin editing"
+  "@hookform/resolvers": "Zod resolver for react-hook-form"
+  "zod": "Schema validation for forms"
+  "jotai": "Lightweight global state management for admin mode"
+
+images:
+  - path: "artifacts/vape-menu/public/images/smoke-bg.png"
+    description: "Dark, moody, abstract vape smoke wisps in deep neon purple and electric cyan colors against a pitch black background. Sleek, premium, and modern aesthetic."
+    aspect_ratio: "16:9"
+
+notes:
+  - "The admin password check expects 'admin1234' on the backend."
+  - "Using generated React Query hooks from @workspace/api-client-react."

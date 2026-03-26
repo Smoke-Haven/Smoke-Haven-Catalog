@@ -1,0 +1,284 @@
+openapi: 3.1.0
+info:
+  title: Api
+  version: 0.1.0
+  description: Vape Menu API
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: menu
+    description: Menu item operations
+  - name: brands
+    description: Brand operations
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+
+  /menu/items:
+    get:
+      operationId: getMenuItems
+      tags: [menu]
+      summary: Get all menu items
+      parameters:
+        - name: brand
+          in: query
+          schema:
+            type: string
+        - name: puffCount
+          in: query
+          schema:
+            type: string
+        - name: inStockOnly
+          in: query
+          schema:
+            type: boolean
+        - name: search
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: List of menu items
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MenuItemList"
+    post:
+      operationId: createMenuItem
+      tags: [menu]
+      summary: Create a menu item (admin)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateMenuItemRequest"
+      responses:
+        "201":
+          description: Created item
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MenuItem"
+
+  /menu/items/{id}:
+    put:
+      operationId: updateMenuItem
+      tags: [menu]
+      summary: Update a menu item (admin)
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateMenuItemRequest"
+      responses:
+        "200":
+          description: Updated item
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MenuItem"
+    delete:
+      operationId: deleteMenuItem
+      tags: [menu]
+      summary: Delete a menu item (admin)
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Deleted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DeleteResponse"
+
+  /menu/brands:
+    get:
+      operationId: getBrands
+      tags: [brands]
+      summary: Get all unique brands
+      responses:
+        "200":
+          description: List of brands
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BrandList"
+
+  /menu/puff-counts:
+    get:
+      operationId: getPuffCounts
+      tags: [menu]
+      summary: Get all unique puff counts
+      responses:
+        "200":
+          description: List of puff counts
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PuffCountList"
+
+  /admin/verify:
+    post:
+      operationId: verifyAdminPassword
+      tags: [menu]
+      summary: Verify admin password
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AdminVerifyRequest"
+      responses:
+        "200":
+          description: Verification result
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AdminVerifyResponse"
+
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+
+    MenuItem:
+      type: object
+      properties:
+        id:
+          type: integer
+        brand:
+          type: string
+        puffCount:
+          type: string
+        flavor:
+          type: string
+        inStock:
+          type: boolean
+        isBestseller:
+          type: boolean
+      required:
+        - id
+        - brand
+        - puffCount
+        - flavor
+        - inStock
+        - isBestseller
+
+    MenuItemList:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/MenuItem"
+      required:
+        - items
+
+    CreateMenuItemRequest:
+      type: object
+      properties:
+        brand:
+          type: string
+        puffCount:
+          type: string
+        flavor:
+          type: string
+        inStock:
+          type: boolean
+        isBestseller:
+          type: boolean
+      required:
+        - brand
+        - puffCount
+        - flavor
+        - inStock
+        - isBestseller
+
+    UpdateMenuItemRequest:
+      type: object
+      properties:
+        brand:
+          type: string
+        puffCount:
+          type: string
+        flavor:
+          type: string
+        inStock:
+          type: boolean
+        isBestseller:
+          type: boolean
+
+    DeleteResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+      required:
+        - success
+
+    BrandList:
+      type: object
+      properties:
+        brands:
+          type: array
+          items:
+            type: string
+      required:
+        - brands
+
+    PuffCountList:
+      type: object
+      properties:
+        puffCounts:
+          type: array
+          items:
+            type: string
+      required:
+        - puffCounts
+
+    AdminVerifyRequest:
+      type: object
+      properties:
+        password:
+          type: string
+      required:
+        - password
+
+    AdminVerifyResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+      required:
+        - success

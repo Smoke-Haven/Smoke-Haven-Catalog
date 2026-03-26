@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Vape Menu"
+version = "1.0.0"
+id = "artifacts/vape-menu"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19374
+
+[services.development]
+run = "pnpm --filter @workspace/vape-menu run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/vape-menu", "run", "build" ]
+publicDir = "artifacts/vape-menu/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19374"
+BASE_PATH = "/"
