@@ -1,22 +1,11 @@
 {
   "version": 2,
-  "builds": [
+  "buildCommand": "pnpm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
     {
-      "src": "dist/index.mjs",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": "dist/**"
-      }
+      "source": "/(.*)",
+      "destination": "/index.mjs"
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "dist/index.mjs"
-    }
-  ],
-  "env": {
-    "PORT": "3001",
-    "NODE_ENV": "production"
-  }
+  ]
 }
