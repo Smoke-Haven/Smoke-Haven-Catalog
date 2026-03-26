@@ -7,8 +7,9 @@ import { setBaseUrl } from "@workspace/api-client-react";
 import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
 
-// Configure API base URL
-setBaseUrl("http://localhost:3000");
+// Configure API base URL (from environment or default to localhost)
+const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3001";
+setBaseUrl(apiUrl);
 
 const queryClient = new QueryClient({
   defaultOptions: {
