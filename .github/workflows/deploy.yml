@@ -30,14 +30,7 @@ jobs:
         run: cd artifacts/vape-menu && pnpm run build
         env:
           VITE_API_URL: https://smoke-haven-api.onrender.com
-          BASE_PATH: /
-
-      - name: Prepare for deployment
-        run: |
-          # Move files from dist/public to dist root
-          cd artifacts/vape-menu
-          mv dist/public/* dist/
-          rmdir dist/public
+          BASE_PATH: /Smoke-Haven-Catalog/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
