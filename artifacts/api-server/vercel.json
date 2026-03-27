@@ -1,11 +1,22 @@
 {
   "version": 2,
-  "buildCommand": "pnpm run build",
-  "outputDirectory": "dist",
-  "rewrites": [
+  "buildCommand": "pnpm install --frozen-lockfile && pnpm run build",
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/index.mjs"
+      "src": "dist/index.mjs",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["dist/**"]
+      }
     }
-  ]
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/index.mjs"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
