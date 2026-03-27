@@ -1,0 +1,13 @@
+[build]
+  base = "artifacts/vape-menu"
+  command = "pnpm install --no-frozen-lockfile && pnpm run build"
+  publish = "dist"
+
+[build.environment]
+  VITE_API_URL = "https://smoke-haven-api.onrender.com"
+  BASE_PATH = "/"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
