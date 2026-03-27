@@ -32,8 +32,15 @@ jobs:
           VITE_API_URL: https://smoke-haven-api.onrender.com
           BASE_PATH: /Smoke-Haven-Catalog/
 
+      - name: Prepare for deployment
+        run: |
+          # Move files from dist/public to dist root
+          cd artifacts/vape-menu
+          mv dist/public/* dist/
+          rmdir dist/public
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./artifacts/vape-menu/dist/public
+          publish_dir: ./artifacts/vape-menu/dist
