@@ -30,7 +30,7 @@ jobs:
         run: cd artifacts/vape-menu && pnpm run build
         env:
           VITE_API_URL: https://smoke-haven-api.onrender.com
-          BASE_PATH: /Smoke-Haven-Catalog/
+          BASE_PATH: /
 
       - name: Prepare for deployment
         run: |
