@@ -12,11 +12,12 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/api/(.*)",
+      "dest": "dist/index.mjs"
+    },
+    {
+      "src": "/healthz",
       "dest": "dist/index.mjs"
     }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  }
+  ]
 }
