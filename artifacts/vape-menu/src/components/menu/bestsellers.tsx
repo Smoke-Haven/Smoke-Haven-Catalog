@@ -22,6 +22,9 @@ export function Bestsellers({ filters }: Props) {
   
   const bestsellers = items.filter(i => i.isBestseller).slice(0, 10);
 
+  // Remove cupboard numbers for bestseller display (e.g., "15K Puffs (1)" -> "15K Puffs")
+  const stripCupboardNumber = (puffCount: string) => puffCount.replace(/\s*\(\d+|F\)$/, '');
+
   if (bestsellers.length === 0) return null;
 
   return (
@@ -56,7 +59,7 @@ export function Bestsellers({ filters }: Props) {
               {item.flavor}
             </h3>
             <div className="inline-block px-3 py-1.5 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-lg text-xs font-medium text-white group-hover:text-primary group-hover:border-primary/40 transition-all duration-300">
-              {item.puffCount}
+              {stripCupboardNumber(item.puffCount)}
             </div>
           </motion.div>
         ))}
