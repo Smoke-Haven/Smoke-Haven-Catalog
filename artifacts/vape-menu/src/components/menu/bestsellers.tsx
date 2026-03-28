@@ -1,6 +1,6 @@
 import { useGetMenuItems } from "@workspace/api-client-react";
 import { FilterState } from "./menu-filters";
-import { stripCupboardNumber } from "../../../lib/strip-cupboard";
+import { stripCupboardNumber } from "@/lib/strip-cupboard";
 import { Flame } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
