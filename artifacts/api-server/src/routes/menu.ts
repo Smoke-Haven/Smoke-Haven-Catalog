@@ -126,10 +126,26 @@ router.get("/puff-counts", async (req, res) => {
     // Strip cupboard numbers (e.g., "15K Puffs (1)" -> "15K Puffs") and deduplicate
     const cleaned = puffCounts
       .map(p => p.replace(/\s*\([^)]*\)\s*$/g, '').trim()) // Remove (1), (2), (F), etc.
-      .filter((v, i, a) => a.indexOf(v) === i) // Remove duplicates
-      .sort();
+      .filter((v, i, a) => a.indexOf(v) === i); // Remove duplicates
     
-    res.json({ puffCounts: cleaned });
+    // Sort: numeric puffs lowest to highest, then non-numeric at the end
+    const sorted = cleaned.sort((a, b) => {
+      const numA = parseInt(a);
+      const numB = parseInt(b);
+      
+      // Both are numbers - sort numerically
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return numA - numB;
+      }
+      // Only a is a number - put it first
+      if (!isNaN(numA)) return -1;
+      // Only b is a number - put it first
+      if (!isNaN(numB)) return 1;
+      // Both are strings - sort alphabetically
+      return a.localeCompare(b);
+    });
+    
+    res.json({ puffCounts: sorted });
   } catch (err) {
     req.log.error({ err }, "Failed to get puff counts");
     res.status(500).json({ error: "Failed to fetch puff counts" });
