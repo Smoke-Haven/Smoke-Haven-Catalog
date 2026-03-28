@@ -14,7 +14,12 @@ router.get("/items", async (req, res) => {
 
     const filter: any = {};
     if (brand) filter.brand = brand;
-    if (puffCount) filter.puffCount = puffCount;
+    
+    // Match puffCount with or without cupboard numbers
+    if (puffCount) {
+      filter.puffCount = { $regex: `^${puffCount}(\\s*\\([^)]*\\))?$`, $options: "i" };
+    }
+    
     if (inStockOnly === "true") filter.inStock = true;
     if (search) filter.flavor = { $regex: search, $options: "i" };
 
@@ -117,8 +122,14 @@ router.get("/puff-counts", async (req, res) => {
     await connect();
     const col = getCollection<MenuItemDoc>("menu_items");
     const puffCounts = await col.distinct("puffCount");
-    puffCounts.sort();
-    res.json({ puffCounts });
+    
+    // Strip cupboard numbers and deduplicate
+    const cleaned = puffCounts
+      .map(p => p.replace(/\s*\([^)]*\)\s*$/g, '').trim()) // Remove (1), (2), (F), etc.
+      .filter((v, i, a) => a.indexOf(v) === i) // Remove duplicates
+      .sort();
+    
+    res.json({ puffCounts: cleaned });
   } catch (err) {
     req.log.error({ err }, "Failed to get puff counts");
     res.status(500).json({ error: "Failed to fetch puff counts" });
