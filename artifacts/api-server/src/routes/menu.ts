@@ -130,18 +130,20 @@ router.get("/puff-counts", async (req, res) => {
     
     // Sort: numeric puffs lowest to highest, then non-numeric at the end
     const sorted = cleaned.sort((a, b) => {
-      // Extract the numeric parts (e.g., "1.5K Puffs" -> 1.5)
-      const numA = parseFloat(a.match(/[\d.]+/)?.[0] || '0');
-      const numB = parseFloat(b.match(/[\d.]+/)?.[0] || '0');
+      // Extract the numeric parts (e.g., "1.5K Puffs" -> 1.5, "2K Puffs" -> 2)
+      const matchA = a.match(/[\d.]+/);
+      const matchB = b.match(/[\d.]+/);
+      const numA = matchA ? parseFloat(matchA[0]) : 0;
+      const numB = matchB ? parseFloat(matchB[0]) : 0;
       
-      // Both are numbers - sort numerically
-      if (numA > 0 && numB > 0) {
+      // If both have numeric parts, sort by number (lowest to highest)
+      if (matchA && matchB) {
         return numA - numB;
       }
-      // Only one is a number - numbers come first
-      if (numA > 0) return -1;
-      if (numB > 0) return 1;
-      // Both are strings - sort alphabetically
+      
+      // Only numbers come first, then strings alphabetically
+      if (matchA) return -1;
+      if (matchB) return 1;
       return a.localeCompare(b);
     });
     
