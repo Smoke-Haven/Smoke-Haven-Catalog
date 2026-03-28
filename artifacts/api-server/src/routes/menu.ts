@@ -123,7 +123,7 @@ router.get("/puff-counts", async (req, res) => {
     const col = getCollection<MenuItemDoc>("menu_items");
     const puffCounts = await col.distinct("puffCount");
     
-    // Strip cupboard numbers and deduplicate
+    // Strip cupboard numbers (e.g., "15K Puffs (1)" -> "15K Puffs") and deduplicate
     const cleaned = puffCounts
       .map(p => p.replace(/\s*\([^)]*\)\s*$/g, '').trim()) // Remove (1), (2), (F), etc.
       .filter((v, i, a) => a.indexOf(v) === i) // Remove duplicates
