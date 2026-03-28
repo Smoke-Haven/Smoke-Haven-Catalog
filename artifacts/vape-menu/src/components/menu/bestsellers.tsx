@@ -1,5 +1,6 @@
 import { useGetMenuItems } from "@workspace/api-client-react";
 import { FilterState } from "./menu-filters";
+import { stripCupboardNumber } from "../../../lib/strip-cupboard";
 import { Flame } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -21,9 +22,6 @@ export function Bestsellers({ filters }: Props) {
   const items = data?.items || [];
   
   const bestsellers = items.filter(i => i.isBestseller).slice(0, 10);
-
-  // Remove cupboard numbers for bestseller display (e.g., "15K Puffs (1)" -> "15K Puffs")
-  const stripCupboardNumber = (puffCount: string) => puffCount.replace(/\s*\(\d+|F\)$/, '');
 
   if (bestsellers.length === 0) return null;
 
