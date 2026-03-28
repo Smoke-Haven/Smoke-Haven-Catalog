@@ -66,13 +66,17 @@ export async function runMigrations() {
     logger.info("Running database migrations (Mongo)...");
     const { db } = await connect();
     
-    // Clear existing data
-    await db!.collection("menu_items").deleteMany({});
-    await db!.collection("counters").deleteMany({});
-    logger.info("Cleared existing menu items and counters");
+    // Check if data already exists
+    const existingCount = await db!.collection("menu_items").countDocuments({});
     
-    await ensureSeedData(SEED_ITEMS);
-    logger.info("Database migrations complete.");
+    if (existingCount === 0) {
+      // Only seed initial data if collection is empty
+      logger.info("Collection is empty, seeding initial data...");
+      await ensureSeedData(SEED_ITEMS);
+      logger.info("Database migrations complete - seeded initial data.");
+    } else {
+      logger.info(`Database already has ${existingCount} items, skipping seed.`);
+    }
   } catch (err) {
     logger.error({ err }, "Database migration failed");
     throw err;
