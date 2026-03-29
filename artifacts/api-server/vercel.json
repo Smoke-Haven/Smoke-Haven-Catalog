@@ -1,23 +1,23 @@
 {
   "version": 2,
-  "buildCommand": "pnpm install --frozen-lockfile && pnpm run build",
+  "buildCommand": "cd ../.. && pnpm install && pnpm run -w --filter=@workspace/api-server build",
   "builds": [
     {
-      "src": "dist/index.mjs",
+      "src": "artifacts/api-server/dist/index.mjs",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": ["dist/**"]
+        "includeFiles": ["artifacts/api-server/dist/**"]
       }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "dist/index.mjs"
+      "dest": "artifacts/api-server/dist/index.mjs"
     },
     {
       "src": "/healthz",
-      "dest": "dist/index.mjs"
+      "dest": "artifacts/api-server/dist/index.mjs"
     }
   ]
 }
