@@ -1,16 +1,5 @@
 {
   "version": 2,
-  "buildCommand": "cd artifacts/api-server && pnpm install && pnpm run build",
-  "outputDirectory": "artifacts/api-server/dist",
-  "functions": {
-    "artifacts/api-server/dist/index.mjs": {
-      "runtime": "nodejs20.x"
-    }
-  },
-  "routes": [
-    {
-      "src": "/.*",
-      "dest": "artifacts/api-server/dist/index.mjs"
-    }
-  ]
+  "buildCommand": "pnpm run -w --filter=@workspace/api-server build",
+  "outputDirectory": "artifacts/api-server/dist"
 }
