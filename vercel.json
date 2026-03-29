@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "buildCommand": "pnpm install && pnpm run -w --filter=@workspace/api-server build",
-  "builds": [
-    {
-      "src": "artifacts/api-server/dist/index.mjs",
-      "use": "@vercel/node"
+  "buildCommand": "cd artifacts/api-server && pnpm install && pnpm run build",
+  "outputDirectory": "artifacts/api-server/dist",
+  "functions": {
+    "artifacts/api-server/dist/index.mjs": {
+      "runtime": "nodejs20.x"
     }
-  ],
+  },
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/.*",
       "dest": "artifacts/api-server/dist/index.mjs"
     }
   ]
