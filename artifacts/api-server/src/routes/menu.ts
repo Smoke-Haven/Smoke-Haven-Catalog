@@ -24,10 +24,10 @@ router.get("/items", async (req, res) => {
     if (search) filter.flavor = { $regex: search, $options: "i" };
 
     const items = await col.find(filter).sort({ brand: 1, puffCount: 1, flavor: 1 }).toArray();
-    res.json({ items });
+    return res.json({ items });
   } catch (err) {
     req.log.error({ err }, "Failed to get menu items");
-    res.status(500).json({ error: "Failed to fetch menu items" });
+    return res.status(500).json({ error: "Failed to fetch menu items" });
   }
 });
 
@@ -49,10 +49,10 @@ router.post("/items", async (req, res) => {
     const doc: MenuItemDoc = { id, ...parsed.data } as MenuItemDoc;
     const r = await col.insertOne(doc);
     const created = await col.findOne({ _id: r.insertedId });
-    res.status(201).json(created);
+    return res.status(201).json(created);
   } catch (err) {
     req.log.error({ err }, "Failed to create menu item");
-    res.status(500).json({ error: "Failed to create menu item" });
+    return res.status(500).json({ error: "Failed to create menu item" });
   }
 });
 
@@ -79,10 +79,10 @@ router.put("/items/:id", async (req, res) => {
     const resUpdate = await col.findOneAndUpdate({ id }, { $set: parsed.data }, { returnDocument: "after" });
     const item = resUpdate.value;
     if (!item) return res.status(404).json({ error: "Item not found" });
-    res.json(item);
+    return res.json(item);
   } catch (err) {
     req.log.error({ err }, "Failed to update menu item");
-    res.status(500).json({ error: "Failed to update menu item" });
+    return res.status(500).json({ error: "Failed to update menu item" });
   }
 });
 
@@ -97,10 +97,10 @@ router.delete("/items/:id", async (req, res) => {
     await connect();
     const col = getCollection("menu_items");
     await col.deleteOne({ id });
-    res.json({ success: true });
+    return res.json({ success: true });
   } catch (err) {
     req.log.error({ err }, "Failed to delete menu item");
-    res.status(500).json({ error: "Failed to delete menu item" });
+    return res.status(500).json({ error: "Failed to delete menu item" });
   }
 });
 
@@ -110,10 +110,10 @@ router.get("/brands", async (req, res) => {
     const col = getCollection<MenuItemDoc>("menu_items");
     const brands = await col.distinct("brand");
     brands.sort();
-    res.json({ brands });
+    return res.json({ brands });
   } catch (err) {
     req.log.error({ err }, "Failed to get brands");
-    res.status(500).json({ error: "Failed to fetch brands" });
+    return res.status(500).json({ error: "Failed to fetch brands" });
   }
 });
 
@@ -147,10 +147,10 @@ router.get("/puff-counts", async (req, res) => {
       return a.localeCompare(b);
     });
     
-    res.json({ puffCounts: sorted });
+    return res.json({ puffCounts: sorted });
   } catch (err) {
     req.log.error({ err }, "Failed to get puff counts");
-    res.status(500).json({ error: "Failed to fetch puff counts" });
+    return res.status(500).json({ error: "Failed to fetch puff counts" });
   }
 });
 
