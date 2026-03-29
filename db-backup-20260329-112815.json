@@ -1,0 +1,1154 @@
+[
+  {
+    "_id": "69c86092d0aea49c38dfb782",
+    "id": 60,
+    "brand": "Al Fakher",
+    "puffCount": "Own Bar (3)",
+    "flavor": "Black Cherry",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac91",
+    "id": 23,
+    "brand": "Al Fakher",
+    "puffCount": "Own Bar (3)",
+    "flavor": "Blueberry Gum",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac92",
+    "id": 24,
+    "brand": "Al Fakher",
+    "puffCount": "Own Bar (3)",
+    "flavor": "Blueberry Mint",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac93",
+    "id": 25,
+    "brand": "Al Fakher",
+    "puffCount": "Own Bar (3)",
+    "flavor": "Cherry Ice",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac94",
+    "id": 26,
+    "brand": "Al Fakher",
+    "puffCount": "Own Bar (3)",
+    "flavor": "Peach Ice",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac9d",
+    "id": 35,
+    "brand": "Breeze",
+    "puffCount": "2K Puffs (3)",
+    "flavor": "Blueberry Watermelon",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac9e",
+    "id": 36,
+    "brand": "Breeze",
+    "puffCount": "2K Puffs (3)",
+    "flavor": "Cherry Cola",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac9f",
+    "id": 37,
+    "brand": "Breeze",
+    "puffCount": "2K Puffs (3)",
+    "flavor": "Grape",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcaca0",
+    "id": 38,
+    "brand": "Breeze",
+    "puffCount": "2K Puffs (3)",
+    "flavor": "Mint",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcaca1",
+    "id": 39,
+    "brand": "Breeze",
+    "puffCount": "2K Puffs (3)",
+    "flavor": "Peach Mango",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcaca2",
+    "id": 40,
+    "brand": "Breeze",
+    "puffCount": "2K Puffs (3)",
+    "flavor": "Pineapple Coconut",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcaca3",
+    "id": 41,
+    "brand": "Breeze",
+    "puffCount": "2K Puffs (3)",
+    "flavor": "Spearmint",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcaca4",
+    "id": 42,
+    "brand": "Breeze",
+    "puffCount": "2K Puffs (3)",
+    "flavor": "Strawberry Banana",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcaca5",
+    "id": 43,
+    "brand": "Breeze",
+    "puffCount": "2K Puffs (3)",
+    "flavor": "Strawberry Kiwi",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcaca6",
+    "id": 44,
+    "brand": "Breeze",
+    "puffCount": "2K Puffs (3)",
+    "flavor": "Strawberry Peach Mint",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcaca7",
+    "id": 45,
+    "brand": "Breeze",
+    "puffCount": "2K Puffs (3)",
+    "flavor": "Vanilla Tobacco",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcaca8",
+    "id": 46,
+    "brand": "Breeze",
+    "puffCount": "6K Puffs (3)",
+    "flavor": "Lemon Cola",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcaca9",
+    "id": 47,
+    "brand": "Breeze",
+    "puffCount": "6K Puffs (3)",
+    "flavor": "Mango",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcacaa",
+    "id": 48,
+    "brand": "Breeze",
+    "puffCount": "6K Puffs (3)",
+    "flavor": "Mint",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcacab",
+    "id": 49,
+    "brand": "Breeze",
+    "puffCount": "6K Puffs (3)",
+    "flavor": "Strawberry Mint",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac8e",
+    "id": 20,
+    "brand": "Escobar",
+    "puffCount": "2.5K Puffs (3)",
+    "flavor": "Blood Orange Tangerine",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac8f",
+    "id": 21,
+    "brand": "Escobar",
+    "puffCount": "2.5K Puffs (3)",
+    "flavor": "Blueberry Papaya Strawberry",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac90",
+    "id": 22,
+    "brand": "Escobar",
+    "puffCount": "2.5K Puffs (3)",
+    "flavor": "Wild Strawberry",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538decf",
+    "id": 66,
+    "brand": "Geek Bar",
+    "puffCount": "15K Puffs (1)",
+    "flavor": "Blueberry Watermelon",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538ded0",
+    "id": 67,
+    "brand": "Geek Bar",
+    "puffCount": "15K Puffs (1)",
+    "flavor": "California Cherry",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538decc",
+    "id": 63,
+    "brand": "Geek Bar",
+    "puffCount": "15K Puffs (1)",
+    "flavor": "Cool Mint",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538dece",
+    "id": 65,
+    "brand": "Geek Bar",
+    "puffCount": "15K Puffs (1)",
+    "flavor": "Frozen Strawberry",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538decd",
+    "id": 64,
+    "brand": "Geek Bar",
+    "puffCount": "15K Puffs (1)",
+    "flavor": "Fucking Fab",
+    "inStock": false,
+    "isBestseller": true
+  },
+  {
+    "_id": "69c85f29293da3dc1538dec7",
+    "id": 58,
+    "brand": "Geek Bar",
+    "puffCount": "15K Puffs (1)",
+    "flavor": "Juicy Peach Ice",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538ded2",
+    "id": 69,
+    "brand": "Geek Bar",
+    "puffCount": "15K Puffs (1)",
+    "flavor": "Mexico Mango",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538ded1",
+    "id": 68,
+    "brand": "Geek Bar",
+    "puffCount": "15K Puffs (1)",
+    "flavor": "Miami Mint",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538deca",
+    "id": 61,
+    "brand": "Geek Bar",
+    "puffCount": "15K Puffs (1)",
+    "flavor": "Strawberry Mango",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538decb",
+    "id": 62,
+    "brand": "Geek Bar",
+    "puffCount": "15K Puffs (1)",
+    "flavor": "Watermelon Ice",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538ded7",
+    "id": 74,
+    "brand": "Geek Bar",
+    "puffCount": "25K Puffs (2)",
+    "flavor": "Blue Rancher",
+    "inStock": false,
+    "isBestseller": true
+  },
+  {
+    "_id": "69c85f29293da3dc1538dedd",
+    "id": 80,
+    "brand": "Geek Bar",
+    "puffCount": "25K Puffs (2)",
+    "flavor": "Cool Mint",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538ded4",
+    "id": 71,
+    "brand": "Geek Bar",
+    "puffCount": "25K Puffs (2)",
+    "flavor": "Miami Mint",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538dedc",
+    "id": 79,
+    "brand": "Geek Bar",
+    "puffCount": "25K Puffs (2)",
+    "flavor": "Orange Slush",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538dede",
+    "id": 81,
+    "brand": "Geek Bar",
+    "puffCount": "25K Puffs (2)",
+    "flavor": "Raspberry Peach Lime",
+    "inStock": true,
+    "isBestseller": true
+  },
+  {
+    "_id": "69c85f29293da3dc1538ded9",
+    "id": 76,
+    "brand": "Geek Bar",
+    "puffCount": "25K Puffs (2)",
+    "flavor": "Sour Apple Ice",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538ded5",
+    "id": 72,
+    "brand": "Geek Bar",
+    "puffCount": "25K Puffs (2)",
+    "flavor": "Sour Fucking Fab",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538ded3",
+    "id": 70,
+    "brand": "Geek Bar",
+    "puffCount": "25K Puffs (2)",
+    "flavor": "Sour Mango Pineapple",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538ded8",
+    "id": 75,
+    "brand": "Geek Bar",
+    "puffCount": "25K Puffs (2)",
+    "flavor": "Strawberry Jam",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538ded6",
+    "id": 73,
+    "brand": "Geek Bar",
+    "puffCount": "25K Puffs (2)",
+    "flavor": "Strawberry Watermelon",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538deda",
+    "id": 77,
+    "brand": "Geek Bar",
+    "puffCount": "25K Puffs (2)",
+    "flavor": "Watermelon Ice",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538dedb",
+    "id": 78,
+    "brand": "Geek Bar",
+    "puffCount": "25K Puffs (2)",
+    "flavor": "White Peach Raspberry",
+    "inStock": true,
+    "isBestseller": true
+  },
+  {
+    "_id": "69c85f29293da3dc1538dee6",
+    "id": 89,
+    "brand": "Geek Galaxy",
+    "puffCount": "15K Puffs (2)",
+    "flavor": "California Cherry",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538dee4",
+    "id": 87,
+    "brand": "Geek Galaxy",
+    "puffCount": "15K Puffs (2)",
+    "flavor": "Fucking Fab",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538dee0",
+    "id": 83,
+    "brand": "Geek Galaxy",
+    "puffCount": "15K Puffs (2)",
+    "flavor": "Mango Slush",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538dee3",
+    "id": 86,
+    "brand": "Geek Galaxy",
+    "puffCount": "15K Puffs (2)",
+    "flavor": "Mexican Mango",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538dedf",
+    "id": 82,
+    "brand": "Geek Galaxy",
+    "puffCount": "15K Puffs (2)",
+    "flavor": "Sour Apple Ice",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538dee1",
+    "id": 84,
+    "brand": "Geek Galaxy",
+    "puffCount": "15K Puffs (2)",
+    "flavor": "Strawberry Kiwi",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538dee2",
+    "id": 85,
+    "brand": "Geek Galaxy",
+    "puffCount": "15K Puffs (2)",
+    "flavor": "Strawberry Mango",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538dee5",
+    "id": 88,
+    "brand": "Geek Galaxy",
+    "puffCount": "15K Puffs (2)",
+    "flavor": "White Peach",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538deea",
+    "id": 93,
+    "brand": "Geek Galaxy",
+    "puffCount": "25K Puffs (1)",
+    "flavor": "Cherry Lemonade",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538deeb",
+    "id": 94,
+    "brand": "Geek Galaxy",
+    "puffCount": "25K Puffs (1)",
+    "flavor": "Grape Colada",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538dee7",
+    "id": 90,
+    "brand": "Geek Galaxy",
+    "puffCount": "25K Puffs (1)",
+    "flavor": "Miami Mint",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538deec",
+    "id": 95,
+    "brand": "Geek Galaxy",
+    "puffCount": "25K Puffs (1)",
+    "flavor": "Peach Perfect Slush",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538deee",
+    "id": 97,
+    "brand": "Geek Galaxy",
+    "puffCount": "25K Puffs (1)",
+    "flavor": "Pina Colada Slush",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538dee8",
+    "id": 91,
+    "brand": "Geek Galaxy",
+    "puffCount": "25K Puffs (1)",
+    "flavor": "Spearmint",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538def0",
+    "id": 99,
+    "brand": "Geek Galaxy",
+    "puffCount": "25K Puffs (1)",
+    "flavor": "Special Grape Ice",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538deef",
+    "id": 98,
+    "brand": "Geek Galaxy",
+    "puffCount": "25K Puffs (1)",
+    "flavor": "Strawberry Bubble Gum",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538dee9",
+    "id": 92,
+    "brand": "Geek Galaxy",
+    "puffCount": "25K Puffs (1)",
+    "flavor": "Tropical Burst",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538deed",
+    "id": 96,
+    "brand": "Geek Galaxy",
+    "puffCount": "25K Puffs (1)",
+    "flavor": "Wild Cherry Slush",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac97",
+    "id": 29,
+    "brand": "Hookah Lit",
+    "puffCount": "Pro (F)",
+    "flavor": "Blackberry Mint",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac98",
+    "id": 30,
+    "brand": "Hookah Lit",
+    "puffCount": "Pro (F)",
+    "flavor": "Fucking Fab",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac99",
+    "id": 31,
+    "brand": "Hookah Lit",
+    "puffCount": "Pro (F)",
+    "flavor": "Mango Freeze",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac9a",
+    "id": 32,
+    "brand": "Hookah Lit",
+    "puffCount": "Pro (F)",
+    "flavor": "Strawberry Ice",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac9b",
+    "id": 33,
+    "brand": "Hookah Lit",
+    "puffCount": "Pro (F)",
+    "flavor": "Sweet Passionfruit",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac9c",
+    "id": 34,
+    "brand": "Hookah Lit",
+    "puffCount": "Pro (F)",
+    "flavor": "Two Apples",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac95",
+    "id": 27,
+    "brand": "Hookah Lit",
+    "puffCount": "Standard (F)",
+    "flavor": "Blueberry Ice",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac96",
+    "id": 28,
+    "brand": "Hookah Lit",
+    "puffCount": "Standard (F)",
+    "flavor": "Lucid Dream",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcacac",
+    "id": 50,
+    "brand": "Mr Fog Switch",
+    "puffCount": "15K Puffs (2)",
+    "flavor": "Blueberry Myst",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcacad",
+    "id": 51,
+    "brand": "Mr Fog Switch",
+    "puffCount": "15K Puffs (2)",
+    "flavor": "Cherry Lemon Ice",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcacae",
+    "id": 52,
+    "brand": "Mr Fog Switch",
+    "puffCount": "15K Puffs (2)",
+    "flavor": "Grape Pomegranate Ice",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcacaf",
+    "id": 53,
+    "brand": "Mr Fog Switch",
+    "puffCount": "15K Puffs (2)",
+    "flavor": "Gum Mint",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcacb3",
+    "id": 57,
+    "brand": "Mr Fog Switch",
+    "puffCount": "15K Puffs (2)",
+    "flavor": "Kiwi Strawberry Ice",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538df0e",
+    "id": 129,
+    "brand": "Mr Fog Switch",
+    "puffCount": "15K Puffs (2)",
+    "flavor": "Kiwi Strawberry Ice",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcacb0",
+    "id": 54,
+    "brand": "Mr Fog Switch",
+    "puffCount": "15K Puffs (2)",
+    "flavor": "Nasty Tropic",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcacb1",
+    "id": 55,
+    "brand": "Mr Fog Switch",
+    "puffCount": "15K Puffs (2)",
+    "flavor": "Tutti Frutti",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcacb2",
+    "id": 56,
+    "brand": "Mr Fog Switch",
+    "puffCount": "15K Puffs (2)",
+    "flavor": "White Peach Slushy",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac88",
+    "id": 14,
+    "brand": "North",
+    "puffCount": "15K Puffs (1)",
+    "flavor": "Blue Slushie",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac87",
+    "id": 13,
+    "brand": "North",
+    "puffCount": "15K Puffs (1)",
+    "flavor": "Blueberry Watermelon",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac89",
+    "id": 15,
+    "brand": "North",
+    "puffCount": "15K Puffs (1)",
+    "flavor": "Grape Twist",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac8a",
+    "id": 16,
+    "brand": "North",
+    "puffCount": "15K Puffs (1)",
+    "flavor": "Mexican Mango",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac8b",
+    "id": 17,
+    "brand": "North",
+    "puffCount": "15K Puffs (1)",
+    "flavor": "Mighty Mint",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac8c",
+    "id": 18,
+    "brand": "North",
+    "puffCount": "15K Puffs (1)",
+    "flavor": "Strawberry Mango",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac8d",
+    "id": 19,
+    "brand": "North",
+    "puffCount": "15K Puffs (1)",
+    "flavor": "Watermelon Ice",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac80",
+    "id": 6,
+    "brand": "North",
+    "puffCount": "5K Puffs (1)",
+    "flavor": "Blueberry Mint",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac81",
+    "id": 7,
+    "brand": "North",
+    "puffCount": "5K Puffs (1)",
+    "flavor": "Mango Freeze",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac82",
+    "id": 8,
+    "brand": "North",
+    "puffCount": "5K Puffs (1)",
+    "flavor": "Mighty Mint",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac83",
+    "id": 9,
+    "brand": "North",
+    "puffCount": "5K Puffs (1)",
+    "flavor": "Peach Berry",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac84",
+    "id": 10,
+    "brand": "North",
+    "puffCount": "5K Puffs (1)",
+    "flavor": "Pineapple Passionfruit",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac85",
+    "id": 11,
+    "brand": "North",
+    "puffCount": "5K Puffs (1)",
+    "flavor": "Pink Lemonade",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac86",
+    "id": 12,
+    "brand": "North",
+    "puffCount": "5K Puffs (1)",
+    "flavor": "Strawmelon",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538def5",
+    "id": 104,
+    "brand": "Posh",
+    "puffCount": "1.5K Puffs (2)",
+    "flavor": "Apple",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538def4",
+    "id": 103,
+    "brand": "Posh",
+    "puffCount": "1.5K Puffs (2)",
+    "flavor": "Cherry Frost",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538def6",
+    "id": 105,
+    "brand": "Posh",
+    "puffCount": "1.5K Puffs (2)",
+    "flavor": "Grape",
+    "inStock": true,
+    "isBestseller": true
+  },
+  {
+    "_id": "69c85f29293da3dc1538def2",
+    "id": 101,
+    "brand": "Posh",
+    "puffCount": "1.5K Puffs (2)",
+    "flavor": "Mint",
+    "inStock": true,
+    "isBestseller": true
+  },
+  {
+    "_id": "69c85f29293da3dc1538def3",
+    "id": 102,
+    "brand": "Posh",
+    "puffCount": "1.5K Puffs (2)",
+    "flavor": "Peach Pineapple Orange Ice",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538def7",
+    "id": 106,
+    "brand": "Posh",
+    "puffCount": "1.5K Puffs (2)",
+    "flavor": "Strawberry",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538def8",
+    "id": 107,
+    "brand": "Posh",
+    "puffCount": "1.5K Puffs (2)",
+    "flavor": "Watermelon",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538def1",
+    "id": 100,
+    "brand": "Posh",
+    "puffCount": "1.5K Puffs (2)",
+    "flavor": "Watermelon Ice",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538df06",
+    "id": 121,
+    "brand": "Posh",
+    "puffCount": "10K Puffs (2)",
+    "flavor": "Coconut Banana",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538df05",
+    "id": 120,
+    "brand": "Posh",
+    "puffCount": "10K Puffs (2)",
+    "flavor": "Mix Berries",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538df0a",
+    "id": 125,
+    "brand": "Posh",
+    "puffCount": "20K Puffs (2)",
+    "flavor": "Dragon Melon",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538df0d",
+    "id": 128,
+    "brand": "Posh",
+    "puffCount": "20K Puffs (2)",
+    "flavor": "Dragon Melon Dream",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538df09",
+    "id": 124,
+    "brand": "Posh",
+    "puffCount": "20K Puffs (2)",
+    "flavor": "Grape Lemonade",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538df0b",
+    "id": 126,
+    "brand": "Posh",
+    "puffCount": "20K Puffs (2)",
+    "flavor": "Jo Jo",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538df07",
+    "id": 122,
+    "brand": "Posh",
+    "puffCount": "20K Puffs (2)",
+    "flavor": "Kiwi Peach",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538df08",
+    "id": 123,
+    "brand": "Posh",
+    "puffCount": "20K Puffs (2)",
+    "flavor": "Mexican Mango",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538df0c",
+    "id": 127,
+    "brand": "Posh",
+    "puffCount": "20K Puffs (2)",
+    "flavor": "Pina Colada",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538defa",
+    "id": 109,
+    "brand": "Posh",
+    "puffCount": "3K Puffs (2)",
+    "flavor": "Berry Melon",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538defb",
+    "id": 110,
+    "brand": "Posh",
+    "puffCount": "3K Puffs (2)",
+    "flavor": "Blue Raspberry Ice",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538def9",
+    "id": 108,
+    "brand": "Posh",
+    "puffCount": "3K Puffs (2)",
+    "flavor": "Mango Strawberry Ice",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538defc",
+    "id": 111,
+    "brand": "Posh",
+    "puffCount": "3K Puffs (2)",
+    "flavor": "Spearmint",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538df04",
+    "id": 119,
+    "brand": "Posh",
+    "puffCount": "5.2K Puffs (2)",
+    "flavor": "Blue Raspberry",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538df00",
+    "id": 115,
+    "brand": "Posh",
+    "puffCount": "5.2K Puffs (2)",
+    "flavor": "Grape Ice",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538df02",
+    "id": 117,
+    "brand": "Posh",
+    "puffCount": "5.2K Puffs (2)",
+    "flavor": "Jugo De Mango",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538defd",
+    "id": 112,
+    "brand": "Posh",
+    "puffCount": "5.2K Puffs (2)",
+    "flavor": "Kiwi Strawberry Ice",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538df03",
+    "id": 118,
+    "brand": "Posh",
+    "puffCount": "5.2K Puffs (2)",
+    "flavor": "Melon Gooseberry",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538defe",
+    "id": 113,
+    "brand": "Posh",
+    "puffCount": "5.2K Puffs (2)",
+    "flavor": "Mint Ice",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538deff",
+    "id": 114,
+    "brand": "Posh",
+    "puffCount": "5.2K Puffs (2)",
+    "flavor": "Razz Mataz",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85f29293da3dc1538df01",
+    "id": 116,
+    "brand": "Posh",
+    "puffCount": "5.2K Puffs (2)",
+    "flavor": "Strawberry Ice",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac7b",
+    "id": 1,
+    "brand": "Tesla Bar",
+    "puffCount": "40K Puffs (1)",
+    "flavor": "Black Cherry",
+    "inStock": false,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac7c",
+    "id": 2,
+    "brand": "Tesla Bar",
+    "puffCount": "40K Puffs (1)",
+    "flavor": "Grape Blow Pop",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac7d",
+    "id": 3,
+    "brand": "Tesla Bar",
+    "puffCount": "40K Puffs (1)",
+    "flavor": "Grape Pear",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac7e",
+    "id": 4,
+    "brand": "Tesla Bar",
+    "puffCount": "40K Puffs (1)",
+    "flavor": "Strawberry Ice",
+    "inStock": true,
+    "isBestseller": false
+  },
+  {
+    "_id": "69c85d55b391ebf503dcac7f",
+    "id": 5,
+    "brand": "Tesla Bar",
+    "puffCount": "40K Puffs (1)",
+    "flavor": "Strawberry Kiwi",
+    "inStock": true,
+    "isBestseller": false
+  }
+]
