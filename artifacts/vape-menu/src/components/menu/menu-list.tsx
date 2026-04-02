@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 type GroupedMenu = Record<string, Record<string, MenuItem[]>>;
+type SortedGroupedMenu = Array<{ brand: string; puffGroups: Array<{ puffCount: string; flavors: MenuItem[] }> }>;
 
 export function MenuList({ filters }: { filters: FilterState }) {
   const [isAdmin] = useAtom(isAdminAtom);
@@ -40,15 +41,38 @@ export function MenuList({ filters }: { filters: FilterState }) {
       map[item.brand][item.puffCount].push(item);
     }
     
-    // Sort
-    const sortedMap: GroupedMenu = {};
-    Object.keys(map).sort((a,b) => a.localeCompare(b)).forEach(brand => {
-      sortedMap[brand] = {};
-      Object.keys(map[brand]).sort((a,b) => a.localeCompare(b)).forEach(puff => {
-        sortedMap[brand][puff] = map[brand][puff].sort((a, b) => a.flavor.localeCompare(b.flavor));
+    // Sort numerically by puff count
+    const getNumericValue = (puffCount: string): number => {
+      const match = puffCount.match(/^([\d.]+)/);
+      return match ? parseFloat(match[1]) : 0;
+    };
+    
+    // Create sorted array structure instead of nested object
+    const sortedGrouped: SortedGroupedMenu = [];
+    
+    Object.keys(map)
+      .sort((a, b) => a.localeCompare(b))
+      .forEach(brand => {
+        const sortedPuffCounts = Object.keys(map[brand])
+          .sort((a, b) => {
+            const aNum = getNumericValue(a);
+            const bNum = getNumericValue(b);
+            if (aNum !== bNum) return aNum - bNum;
+            return a.localeCompare(b);
+          });
+        
+        sortedGrouped.push({
+          brand,
+          puffGroups: sortedPuffCounts.map(puffCount => ({
+            puffCount,
+            flavors: map[brand][puffCount].sort((a, b) => 
+              a.flavor.localeCompare(b.flavor)
+            )
+          }))
+        });
       });
-    });
-    return sortedMap;
+    
+    return sortedGrouped;
   }, [items]);
 
   const handleEdit = (item: MenuItem) => {
@@ -92,7 +116,7 @@ export function MenuList({ filters }: { filters: FilterState }) {
 
   return (
     <div className="space-y-12">
-      {Object.entries(grouped).map(([brand, puffGroups]) => (
+      {grouped.map(({ brand, puffGroups }) => (
         <div key={brand} className="relative">
           {/* Sticky Brand Header */}
           <div className="sticky top-0 z-10 bg-gradient-to-b from-background via-background/90 to-background/0 backdrop-blur-xl py-6 border-b border-primary/10 mb-8">
@@ -102,7 +126,7 @@ export function MenuList({ filters }: { filters: FilterState }) {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-2">
-            {Object.entries(puffGroups).map(([puff, flavors]) => (
+            {puffGroups.map(({ puffCount: puff, flavors }) => (
               <motion.div 
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}

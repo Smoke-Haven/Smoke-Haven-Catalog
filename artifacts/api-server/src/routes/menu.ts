@@ -23,7 +23,25 @@ router.get("/items", async (req, res) => {
     if (inStockOnly === "true") filter.inStock = true;
     if (search) filter.flavor = { $regex: search, $options: "i" };
 
-    const items = await col.find(filter).sort({ brand: 1, puffCount: 1, flavor: 1 }).toArray();
+    const items = await col.find(filter).sort({ brand: 1, flavor: 1 }).toArray();
+    
+    // Sort numerically by extracting the numeric puff count value
+    items.sort((a, b) => {
+      if (a.brand !== b.brand) return a.brand.localeCompare(b.brand);
+      
+      // Extract numeric value from puffCount (e.g., "5K Puffs (1)" -> 5)
+      const getNumericValue = (puffCount: string): number => {
+        const match = puffCount.match(/^([\d.]+)/);
+        return match ? parseFloat(match[1]) : 0;
+      };
+      
+      const aNum = getNumericValue(a.puffCount);
+      const bNum = getNumericValue(b.puffCount);
+      
+      if (aNum !== bNum) return aNum - bNum;
+      return a.flavor.localeCompare(b.flavor);
+    });
+    
     return res.json({ items });
   } catch (err) {
     req.log.error({ err }, "Failed to get menu items");
