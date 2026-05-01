@@ -28,6 +28,9 @@ const getBrandSortValue = (brand: string) => {
   return index === -1 ? Number.MAX_SAFE_INTEGER : index;
 };
 
+const isPoshTwentyK = (item: MenuItem) =>
+  item.brand === "Posh" && /^20K Puffs(?:\s*\([^)]*\))?$/i.test(item.puffCount);
+
 export function MenuList({ filters }: { filters: FilterState }) {
   const [isAdmin] = useAtom(isAdminAtom);
   const invalidate = useInvalidateMenu();
@@ -50,10 +53,16 @@ export function MenuList({ filters }: { filters: FilterState }) {
 
   const grouped = useMemo(() => {
     const map: GroupedMenu = {};
+    const remainingPoshMap: GroupedMenu = {};
     for (const item of items) {
-      if (!map[item.brand]) map[item.brand] = {};
-      if (!map[item.brand][item.puffCount]) map[item.brand][item.puffCount] = [];
-      map[item.brand][item.puffCount].push(item);
+      const targetMap =
+        !filters.brand && item.brand === "Posh" && !isPoshTwentyK(item)
+          ? remainingPoshMap
+          : map;
+
+      if (!targetMap[item.brand]) targetMap[item.brand] = {};
+      if (!targetMap[item.brand][item.puffCount]) targetMap[item.brand][item.puffCount] = [];
+      targetMap[item.brand][item.puffCount].push(item);
     }
     
     // Sort numerically by puff count
@@ -65,6 +74,26 @@ export function MenuList({ filters }: { filters: FilterState }) {
     // Create sorted array structure instead of nested object
     const sortedGrouped: SortedGroupedMenu = [];
     
+    const addBrandGroup = (brand: string, puffMap: Record<string, MenuItem[]>) => {
+      const sortedPuffCounts = Object.keys(puffMap)
+        .sort((a, b) => {
+          const aNum = getNumericValue(a);
+          const bNum = getNumericValue(b);
+          if (aNum !== bNum) return aNum - bNum;
+          return a.localeCompare(b);
+        });
+
+      sortedGrouped.push({
+        brand,
+        puffGroups: sortedPuffCounts.map(puffCount => ({
+          puffCount,
+          flavors: puffMap[puffCount].sort((a, b) =>
+            a.flavor.localeCompare(b.flavor)
+          )
+        }))
+      });
+    };
+
     Object.keys(map)
       .sort((a, b) => {
         if (filters.brand) return a.localeCompare(b);
@@ -75,24 +104,12 @@ export function MenuList({ filters }: { filters: FilterState }) {
         return a.localeCompare(b);
       })
       .forEach(brand => {
-        const sortedPuffCounts = Object.keys(map[brand])
-          .sort((a, b) => {
-            const aNum = getNumericValue(a);
-            const bNum = getNumericValue(b);
-            if (aNum !== bNum) return aNum - bNum;
-            return a.localeCompare(b);
-          });
-        
-        sortedGrouped.push({
-          brand,
-          puffGroups: sortedPuffCounts.map(puffCount => ({
-            puffCount,
-            flavors: map[brand][puffCount].sort((a, b) => 
-              a.flavor.localeCompare(b.flavor)
-            )
-          }))
-        });
+        addBrandGroup(brand, map[brand]);
       });
+
+    if (!filters.brand && remainingPoshMap.Posh) {
+      addBrandGroup("Posh", remainingPoshMap.Posh);
+    }
     
     return sortedGrouped;
   }, [items, filters.brand]);
@@ -138,8 +155,8 @@ export function MenuList({ filters }: { filters: FilterState }) {
 
   return (
     <div className="space-y-12">
-      {grouped.map(({ brand, puffGroups }) => (
-        <div key={brand} className="relative">
+      {grouped.map(({ brand, puffGroups }, brandIndex) => (
+        <div key={`${brand}-${brandIndex}`} className="relative">
           {/* Sticky Brand Header */}
           <div className="sticky top-0 z-10 bg-gradient-to-b from-background via-background/90 to-background/0 backdrop-blur-xl py-6 border-b border-primary/10 mb-8">
             <h2 className="text-4xl lg:text-5xl font-display font-black tracking-tight text-white drop-shadow-[0_0_20px_rgba(255,165,0,0.5)]">
