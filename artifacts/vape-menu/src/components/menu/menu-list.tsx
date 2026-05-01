@@ -13,6 +13,21 @@ import { motion } from "framer-motion";
 type GroupedMenu = Record<string, Record<string, MenuItem[]>>;
 type SortedGroupedMenu = Array<{ brand: string; puffGroups: Array<{ puffCount: string; flavors: MenuItem[] }> }>;
 
+const ALL_BRANDS_DISPLAY_ORDER = [
+  "Mr Fog Switch",
+  "Posh",
+  "Fogger",
+  "Foger",
+  "Tesla Bar",
+  "North",
+  "Geek Bar",
+];
+
+const getBrandSortValue = (brand: string) => {
+  const index = ALL_BRANDS_DISPLAY_ORDER.indexOf(brand);
+  return index === -1 ? Number.MAX_SAFE_INTEGER : index;
+};
+
 export function MenuList({ filters }: { filters: FilterState }) {
   const [isAdmin] = useAtom(isAdminAtom);
   const invalidate = useInvalidateMenu();
@@ -51,7 +66,14 @@ export function MenuList({ filters }: { filters: FilterState }) {
     const sortedGrouped: SortedGroupedMenu = [];
     
     Object.keys(map)
-      .sort((a, b) => a.localeCompare(b))
+      .sort((a, b) => {
+        if (filters.brand) return a.localeCompare(b);
+
+        const aOrder = getBrandSortValue(a);
+        const bOrder = getBrandSortValue(b);
+        if (aOrder !== bOrder) return aOrder - bOrder;
+        return a.localeCompare(b);
+      })
       .forEach(brand => {
         const sortedPuffCounts = Object.keys(map[brand])
           .sort((a, b) => {
@@ -73,7 +95,7 @@ export function MenuList({ filters }: { filters: FilterState }) {
       });
     
     return sortedGrouped;
-  }, [items]);
+  }, [items, filters.brand]);
 
   const handleEdit = (item: MenuItem) => {
     setEditingItem(item);
